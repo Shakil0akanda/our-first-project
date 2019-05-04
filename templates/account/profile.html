@@ -1,0 +1,13 @@
+{% extends "account/base.html" %}
+
+{% block title_block %}
+  {{ user.username }}
+{% endblock %}
+
+{% block body_block %}
+  <h3>{{ user.username }}</h3>
+  <h3>{{ user.email }}</h3>
+  <h3>{{ user.userprofileinfo.portfolio_site }}</h3>
+  <h3> Image: </h3>
+  <img src="{{ user.userprofileinfo.profile_pic.url }}" alt="{{ user.username }}" width ="250px">
+{% endblock %}
